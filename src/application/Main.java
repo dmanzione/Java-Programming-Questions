@@ -1,14 +1,16 @@
 package application;
 
+import exceptions.InvalidInputException;
+import questions.Palindrome;
 import questions.StringReversal;
 
 public class Main {
 
-	public static void main(String[] args) {
-		
-		StringReversal reversalTest = new StringReversal();
-		System.out.println(reversalTest.reverse("donato"));
+	public static void main(String[] args) throws InvalidInputException {
 
+		System.out.println(StringReversal.reverse("donato"));
+		System.out.println(Palindrome.isPalindrome("ddassadd"));
+		System.out.println(Palindrome.isPalindrome("asdfgasdfasdf"));
 	}
 
 }
