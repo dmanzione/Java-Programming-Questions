@@ -9,10 +9,10 @@ public class Palindrome {
 	// form the same word if it is reversed. *Do* include spaces
 	// and punctuation in determining if the string is a palindrome.
 
+	// First solution: compare each character to the character at the other side
 	public static Boolean isPalindrome(String inputString) throws InvalidInputException {
-		if (inputString == null) {
-			throw new InvalidInputException();
-		}
+
+		checkNotNull(inputString);
 
 		// If size of string is 1
 		if (inputString.length() == 1) {
@@ -28,6 +28,27 @@ public class Palindrome {
 				return false;
 		}
 		return true;
+
+	}
+
+	// Second solution: reverse string and compare
+	public static Boolean isPalindrome2(String inputString) throws InvalidInputException {
+
+		checkNotNull(inputString);
+
+		StringBuilder reverseString = new StringBuilder();
+		reverseString.append(inputString);
+		 reverseString.reverse();
+		String reversedString = reverseString.toString();
+
+		return inputString.equals(reversedString);
+
+	}
+
+	private static void checkNotNull(Object input) throws InvalidInputException {
+		if (input == null) {
+			throw new InvalidInputException();
+		}
 
 	}
 }
