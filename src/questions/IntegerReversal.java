@@ -7,11 +7,11 @@ public class IntegerReversal {
 	// Given an integer, return an integer that is the reverse
 	// ordering of numbers.
 	// --- Examples
-	//   reverseInt(15) === 51
-	//   reverseInt(981) === 189
-	//   reverseInt(500) === 5
-	//   reverseInt(-15) === -51
-	//   reverseInt(-90) === -9
+	// reverseInt(15) === 51
+	// reverseInt(981) === 189
+	// reverseInt(500) === 5
+	// reverseInt(-15) === -51
+	// reverseInt(-90) === -9
 
 	public static int reverseInt(int inputInteger) throws InvalidInputException {
 
@@ -28,7 +28,7 @@ public class IntegerReversal {
 		}
 
 		// Remove leading zeroes by finding index at position to the right of last
-		// leading index...
+		// leading zero...
 
 		int indexAtWhichToStartTransferring = 0;
 		for (int i = 0; i < reversedInt.length(); i++) {
@@ -38,7 +38,7 @@ public class IntegerReversal {
 			}
 		}
 
-		// ... and then transferring all remaining characters except - to new String
+		// ... and then transferring all remaining characters except '-' to new String
 		// variable
 		String reversedIntNoLeadingZeroes = "";
 		for (int i = indexAtWhichToStartTransferring; i < reversedInt.length(); i++) {

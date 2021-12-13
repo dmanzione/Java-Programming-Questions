@@ -2,6 +2,7 @@ package application;
 
 import exceptions.InvalidInputException;
 import questions.IntegerReversal;
+import questions.MaxChar;
 import questions.PalindromeTest;
 import questions.StringReversal;
 
@@ -25,6 +26,9 @@ public class Main {
 		System.out.println(IntegerReversal.reverseInt(-15));
 		System.out.println(IntegerReversal.reverseInt(9801));
 
+		System.out.println(MaxChar.find("2342ddssdsssssssssssss34gdf"));
+		// maxChar("abcccccccd") === "c"
+		// maxChar("apple 1231111") === "1"
 	}
 
 }
