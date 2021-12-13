@@ -36,10 +36,8 @@ public class Palindrome {
 
 		checkNotNull(inputString);
 
-		StringBuilder reverseString = new StringBuilder();
-		reverseString.append(inputString);
-		 reverseString.reverse();
-		String reversedString = reverseString.toString();
+		// Reverse String
+		String reversedString = StringReversal.reverse(inputString);
 
 		return inputString.equals(reversedString);
 
