@@ -1,20 +1,30 @@
 package application;
 
 import exceptions.InvalidInputException;
-import questions.Palindrome;
+import questions.IntegerReversal;
+import questions.PalindromeTest;
 import questions.StringReversal;
 
 public class Main {
 
 	public static void main(String[] args) throws InvalidInputException {
 
-		System.out.println(StringReversal.reverse("donato"));
+		// STRING REVERSAL TESTS
+		StringReversal.reverse("donato");
 
-		System.out.println(Palindrome.isPalindrome("ddassadd"));
-		System.out.println(Palindrome.isPalindrome("asdfgasdfasdf"));
-		System.out.println(Palindrome.isPalindrome2("donato"));
-		System.out.println(Palindrome.isPalindrome2("ddassadd"));
-		System.out.println(Palindrome.isPalindrome2("asdfgasdfasdf"));
+		// PALINDROME TESTS
+		PalindromeTest.isPalindrome("ddassadd");
+		PalindromeTest.isPalindrome("asdfgasdfasdf");
+		PalindromeTest.isPalindrome2("donato");
+		PalindromeTest.isPalindrome2("ddassadd");
+		PalindromeTest.isPalindrome2("asdfgasdfasdf");
+
+		
+		System.out.println(IntegerReversal.reverseInt(981));
+		System.out.println(IntegerReversal.reverseInt(500));
+		System.out.println(IntegerReversal.reverseInt(-15));
+		System.out.println(IntegerReversal.reverseInt(9801));
+
 	}
 
 }

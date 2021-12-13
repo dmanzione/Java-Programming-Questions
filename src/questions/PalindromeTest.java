@@ -2,7 +2,7 @@ package questions;
 
 import exceptions.InvalidInputException;
 
-public class Palindrome {
+public class PalindromeTest {
 	// --- Directions
 	// Given a string, return true if the string is a palindrome
 	// or false if it is not. Palindromes are strings that
@@ -16,7 +16,7 @@ public class Palindrome {
 
 		// If size of string is 1
 		if (inputString.length() == 1) {
-
+			System.out.println(inputString + " is palindrome.");
 			return true;
 		}
 
@@ -24,9 +24,12 @@ public class Palindrome {
 
 			if (inputString.charAt(i) == inputString.charAt(inputString.length() - (i + 1)))
 				continue;
-			else
+			else {
+				System.out.println(inputString + " is not palindrome.");
 				return false;
+			}
 		}
+		System.out.println(inputString + " is palindrome.");
 		return true;
 
 	}
