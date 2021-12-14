@@ -26,7 +26,7 @@ public class Main {
 		System.out.println(IntegerReversal.reverseInt(-15));
 		System.out.println(IntegerReversal.reverseInt(9801));
 
-		System.out.println(MaxChar.find("2342ddssdsssssssssssss34gdf"));
+		System.out.println(MaxChar.find("2342ddssdsssssdd34gdfd"));
 		// maxChar("abcccccccd") === "c"
 		// maxChar("apple 1231111") === "1"
 	}
