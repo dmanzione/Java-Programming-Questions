@@ -1,6 +1,7 @@
 package application;
 
 import exceptions.InvalidInputException;
+import questions.FizzBuzz;
 import questions.IntegerReversal;
 import questions.MaxChar;
 import questions.PalindromeTest;
@@ -29,6 +30,8 @@ public class Main {
 		System.out.println(MaxChar.find("2342ddssdsssssdd34gdfd"));
 		// maxChar("abcccccccd") === "c"
 		// maxChar("apple 1231111") === "1"
+		
+		FizzBuzz.fb(100);
 	}
 
 }

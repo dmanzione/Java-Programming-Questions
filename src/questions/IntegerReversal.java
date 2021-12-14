@@ -38,8 +38,8 @@ public class IntegerReversal {
 			}
 		}
 
-		// ... and then transferring all remaining characters except '-' to new String
-		// variable
+		// ... and then transferring all remaining characters except '-' to new
+		// String variable
 		String reversedIntNoLeadingZeroes = "";
 		for (int i = indexAtWhichToStartTransferring; i < reversedInt.length(); i++) {
 			if (reversedInt.charAt(i) != '-') {
