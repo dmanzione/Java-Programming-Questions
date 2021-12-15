@@ -8,22 +8,22 @@ public class FizzBuzz {
 	// of five print “buzz”. For numbers which are multiples
 	// of both three and five print “fizzbuzz”.
 	// --- Example
-	//   fizzBuzz(5);
-	//   1
-	//   2
-	//   fizz
-	//   4
-	//   buzz
-	
-	public static void fb(int number){
-		for(int i = 1;i<number;i++) {
-			if(i%15==0) {
+	// fizzBuzz(5);
+	// 1
+	// 2
+	// fizz
+	// 4
+	// buzz
+
+	public static void fb(int number) {
+		for (int i = 1; i < number; i++) {
+			if (i % 15 == 0) {
 				System.out.println("fizzbuzz");
-			}else if(i%3==0) {
+			} else if (i % 3 == 0) {
 				System.out.println("fizz");
-			}else if(i%5==0) {
+			} else if (i % 5 == 0) {
 				System.out.println("buzz");
-			}else {
+			} else {
 				System.out.println(i);
 			}
 		}

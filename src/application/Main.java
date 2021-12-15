@@ -36,8 +36,10 @@ public class Main {
 		Anagrams.check("rail safety", "fairy tales");
 		Anagrams.check("RAIL! SAFETY!", "fairy tales");
 		Anagrams.check("Hi there", "Bye there");
-		
-		FibonacciSequence.printUsingLoop(100);
+
+		FibonacciSequence.printSequenceUpToNUsingLoop(60);
+
+		FibonacciSequence.printNthFibNumer(10);
 	}
 
 }
