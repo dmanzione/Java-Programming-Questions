@@ -2,6 +2,7 @@ package application;
 
 import exceptions.InvalidInputException;
 import questions.Anagrams;
+import questions.FibonacciSequence;
 import questions.FizzBuzz;
 import questions.IntegerReversal;
 import questions.MaxChar;
@@ -35,6 +36,8 @@ public class Main {
 		Anagrams.check("rail safety", "fairy tales");
 		Anagrams.check("RAIL! SAFETY!", "fairy tales");
 		Anagrams.check("Hi there", "Bye there");
+		
+		FibonacciSequence.printUsingLoop(100);
 	}
 
 }
