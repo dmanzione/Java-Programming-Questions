@@ -2,7 +2,7 @@ package questions;
 
 import exceptions.InvalidInputException;
 
-public class IntegerReversal {
+public class IntegerProblems {
 	// --- Directions
 	// Given an integer, return an integer that is the reverse
 	// ordering of numbers.
@@ -17,7 +17,7 @@ public class IntegerReversal {
 
 		String intAsString = String.valueOf(inputInteger);
 
-		String reversedInt = StringReversal.reverse(intAsString);
+		String reversedInt = StringProblems.reverse(intAsString);
 
 		// Make note if integer is negative by checking if there is a negative sign
 		// character
@@ -52,6 +52,8 @@ public class IntegerReversal {
 			reversedIntNoLeadingZeroes = "-" + reversedIntNoLeadingZeroes;
 
 		// Convert String to Integer and return
+		
+		System.out.println(intAsString + " reversed is " + reversedIntNoLeadingZeroes);
 		return Integer.valueOf(reversedIntNoLeadingZeroes);
 
 	}

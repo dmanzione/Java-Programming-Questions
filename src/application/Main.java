@@ -1,45 +1,53 @@
 package application;
 
 import exceptions.InvalidInputException;
-import questions.Anagrams;
 import questions.FibonacciSequence;
 import questions.FizzBuzz;
-import questions.IntegerReversal;
-import questions.MaxChar;
-import questions.PalindromeTest;
-import questions.StringReversal;
+import questions.IntegerProblems;
+import questions.StringProblems;
 
 public class Main {
 
 	public static void main(String[] args) throws InvalidInputException {
 
-		// STRING REVERSAL TESTS
-		StringReversal.reverse("donato");
+		
 
-		// PALINDROME TESTS
-		PalindromeTest.isPalindrome("ddassadd");
-		PalindromeTest.isPalindrome("asdfgasdfasdf");
-		PalindromeTest.isPalindrome2("donato");
-		PalindromeTest.isPalindrome2("ddassadd");
-		PalindromeTest.isPalindrome2("asdfgasdfasdf");
+		// STRING PROBLEMS
+		
+		// reverse string
+		StringProblems.reverse("donato");
+		
+		// check if string is palindrome
+		StringProblems.isPalindrome("ddassadd");
+		StringProblems.isPalindrome("asdfgasdfasdf");
+		StringProblems.isPalindrome2("donato");
+		StringProblems.isPalindrome2("ddassadd");
+		StringProblems.isPalindrome2("asdfgasdfasdf");
+	
+		// return most repeated character in string
+		StringProblems.maxChar("2342ddssdsssssdd34gdfd");
+		
+		// check if two strings are anagrams of each other
+		StringProblems.areAnagrams("rail safety", "fairy tales");
+		StringProblems.areAnagrams("RAIL! SAFETY!", "fairy tales");
+		StringProblems.areAnagrams("Hi there", "Bye there");
 
-		System.out.println(IntegerReversal.reverseInt(981));
-		System.out.println(IntegerReversal.reverseInt(500));
-		System.out.println(IntegerReversal.reverseInt(-15));
-		System.out.println(IntegerReversal.reverseInt(9801));
+		StringProblems.hasUniqueCharacters("asdfghjkl");
+		StringProblems.hasUniqueCharacters("asdfgas");
+		
+		IntegerProblems.reverseInt(981);
+		IntegerProblems.reverseInt(500);
+		IntegerProblems.reverseInt(-15);
+		IntegerProblems.reverseInt(9801);
 
-		System.out.println(MaxChar.find("2342ddssdsssssdd34gdfd"));
-		// maxChar("abcccccccd") === "c"
-		// maxChar("apple 1231111") === "1"
-
-		FizzBuzz.fb(100);
-		Anagrams.check("rail safety", "fairy tales");
-		Anagrams.check("RAIL! SAFETY!", "fairy tales");
-		Anagrams.check("Hi there", "Bye there");
-
+		
 		FibonacciSequence.printSequenceUpToNUsingLoop(60);
 
-		FibonacciSequence.printNthFibNumer(10);
+		FibonacciSequence.printNthFibNumber(10);
+
+		FizzBuzz.fb(100);
+
+		
 	}
 
 }

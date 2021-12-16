@@ -37,7 +37,7 @@ public class FibonacciSequence {
 	}
 
 	// Given a number n, print n-th Fibonacci Number.
-	public static void printNthFibNumer(int n) {
+	public static void printNthFibNumber(int n) {
 		int previousFib = 1;
 		int currentFib = 1;
 
