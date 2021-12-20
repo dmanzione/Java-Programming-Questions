@@ -8,6 +8,7 @@ import questions.IntegerReversal;
 import questions.MaxChar;
 import questions.Palindrome;
 import questions.SentenceCapitalization;
+import questions.Steps;
 import questions.StringReversal;
 
 public class Main {
@@ -46,12 +47,14 @@ public class Main {
 //
 //		FibonacciSequence.printNthFibNumber(10);
 
-		SentenceCapitalization.capitalize("  hello     how are you      ");
-		SentenceCapitalization.capitalize("a short sentence");
-		SentenceCapitalization.capitalize("a lazy fox");
-		SentenceCapitalization.capitalize("look, it is working!");
+		//SENTENCE CAPITALIZATION TEST
+//		SentenceCapitalization.capitalize("  hello     how are you      ");
+//		SentenceCapitalization.capitalize("a short sentence");
+//		SentenceCapitalization.capitalize("a lazy fox");
+//		SentenceCapitalization.capitalize("look, it is working!");
 		
-		
+		//STEPS PROBLEM TESTS
+		Steps.print(100);
 	}
 
 }

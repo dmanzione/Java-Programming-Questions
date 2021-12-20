@@ -1,5 +1,8 @@
 package questions;
 
+import exceptions.InvalidInputException;
+import utilities.Utilities;
+
 public class SentenceCapitalization {
 	// --- Directions
 	// Write a function that accepts a string. The function should
@@ -10,7 +13,9 @@ public class SentenceCapitalization {
 	// capitalize('a lazy fox') --> 'A Lazy Fox'
 	// capitalize('look, it is working!') --> 'Look, It Is Working!'
 
-	public static String capitalize(String inputString) {
+	public static String capitalize(String inputString) throws InvalidInputException {
+
+		Utilities.testNotNull(inputString);
 
 		String[] words = inputString.split(" ");
 		String returnString = "";
