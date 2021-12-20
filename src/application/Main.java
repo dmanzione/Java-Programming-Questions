@@ -11,6 +11,7 @@ import questions.Pyramid;
 import questions.SentenceCapitalization;
 import questions.Steps;
 import questions.StringReversal;
+import questions.Vowels;
 
 public class Main {
 
@@ -63,6 +64,11 @@ public class Main {
 //		Pyramid.make(10);
 //		Pyramid.make(100);
 		
+		//VOWELS TESTS
+		Vowels.count("Hi There!");
+		Vowels.count("Why do you ask?");
+		Vowels.count("Ask Google!");
+		Vowels.count("Why?");
 	}
 
 }
