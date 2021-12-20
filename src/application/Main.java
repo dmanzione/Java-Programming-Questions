@@ -7,6 +7,7 @@ import questions.FizzBuzz;
 import questions.IntegerReversal;
 import questions.MaxChar;
 import questions.Palindrome;
+import questions.Pyramid;
 import questions.SentenceCapitalization;
 import questions.Steps;
 import questions.StringReversal;
@@ -47,14 +48,21 @@ public class Main {
 //
 //		FibonacciSequence.printNthFibNumber(10);
 
-		//SENTENCE CAPITALIZATION TEST
+		//SENTENCE CAPITALIZATION TESTS
 //		SentenceCapitalization.capitalize("  hello     how are you      ");
 //		SentenceCapitalization.capitalize("a short sentence");
 //		SentenceCapitalization.capitalize("a lazy fox");
 //		SentenceCapitalization.capitalize("look, it is working!");
 		
-		//STEPS PROBLEM TESTS
-		Steps.print(100);
+		//STEPS PROBLEM TEST
+//		Steps.print(100);
+		
+		//PYRAMID PROBLEM TESTS
+//		Pyramid.make(0);
+//		Pyramid.make(2);
+//		Pyramid.make(10);
+//		Pyramid.make(100);
+		
 	}
 
 }
