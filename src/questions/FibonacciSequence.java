@@ -49,4 +49,6 @@ public class FibonacciSequence {
 
 		System.out.println(currentFib);
 	}
+
+	
 }
