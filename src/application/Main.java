@@ -5,6 +5,7 @@ import questions.Anagrams;
 import questions.FibonacciSequence;
 import questions.FizzBuzz;
 import questions.IntegerReversal;
+import questions.Matrix;
 import questions.MaxChar;
 import questions.Palindrome;
 import questions.Pyramid;
@@ -65,10 +66,12 @@ public class Main {
 //		Pyramid.make(100);
 		
 		//VOWELS TESTS
-		Vowels.count("Hi There!");
-		Vowels.count("Why do you ask?");
-		Vowels.count("Ask Google!");
-		Vowels.count("Why?");
+//		Vowels.count("Hi There!");
+//		Vowels.count("Why do you ask?");
+//		Vowels.count("Ask Google!");
+//		Vowels.count("Why?");
+		Matrix.returnSpiral(8);
+		
 	}
 
 }
