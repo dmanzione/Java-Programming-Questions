@@ -1,5 +1,7 @@
 package application;
 
+
+import exceptions.EmptyDataStructureException;
 import exceptions.InvalidInputException;
 import questions.Anagrams;
 import questions.FibonacciSequence;
@@ -9,6 +11,8 @@ import questions.Matrix;
 import questions.MaxChar;
 import questions.Palindrome;
 import questions.Pyramid;
+import questions.Queue;
+import questions.QueueWeave;
 import questions.SentenceCapitalization;
 import questions.Steps;
 import questions.StringReversal;
@@ -16,11 +20,11 @@ import questions.Vowels;
 
 public class Main {
 
-	public static void main(String[] args) throws InvalidInputException {
+	public static void main(String[] args) throws InvalidInputException, EmptyDataStructureException {
 
 //		// STRING REVERSAL TESTS
-//		StringReversal.reverse("donato");
-//
+		StringReversal.reverse("donato");
+
 //		// PALINDROME TESTS
 //		Palindrome.isPalindrome("ddassadd");
 //		Palindrome.isPalindrome("asdfgasdfasdf");
@@ -77,6 +81,17 @@ public class Main {
 //		Matrix.returnSpiral(0);
 //		Matrix.returnSpiral(1);
 //		Matrix.returnSpiral(2);
+		
+		//WEAVE TESTS
+		//create 1s
+//		Queue<Integer> q1 = new Queue();
+//		q1.add(1);
+//		q1.add(2);
+//		Queue<Integer> q2 = new Queue();
+//		q2.add(100);
+//		q2.add(200);
+//		QueueWeave.weave(q1, q2).print();
+		
 		
 	}
 
