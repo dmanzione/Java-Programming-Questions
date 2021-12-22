@@ -74,6 +74,9 @@ public class Main {
 		//MATRIX TESTS
 //		Matrix.returnSpiral(4);
 //		Matrix.returnSpiral(10);
+//		Matrix.returnSpiral(0);
+//		Matrix.returnSpiral(1);
+//		Matrix.returnSpiral(2);
 		
 	}
 
