@@ -33,67 +33,74 @@ public class Matrix {
 		}
 
 		matrix = new int[n][n];
-		
+
+		matrix[0][0] = 1;
+
 		if (n == 1) {
 
-			matrix[0][0] = 1;
 			printMatrix();
 			return matrix;
 
 		}
 		int[] currentPosition = { 0, 0 };
 		int count = 1;
-		int numOfElements = n * n;
 
-		for (int j = 0; j < n * n; j++) {
+		while(count<n*n) {
+//			System.out.println("Current position is " + currentPosition[0] + ", " + currentPosition[1]);
+//			System.out.println("Moving " + direction.toString().toLowerCase());
+			switch (direction) {
 
-			if (direction == Direction.RIGHT) {
+			case RIGHT:
 
-				int numOfOperationsToTheRight = n - currentPosition[1];
-				for (int i = currentPosition[1]; i < numOfOperationsToTheRight; i++) {
-					System.out.println("Current Position is: " + currentPosition[0] + ", " + currentPosition[1]);
+				// If the next element is a number or you've reached the edge of the matrix,
+				// change direction. Otherwise, add next element.
 
-					matrix[currentPosition[0]][i] = count;
-					count++;
-					currentPosition[1] = i;
+				if (currentPosition[1] >= n - 1 || matrix[currentPosition[0]][currentPosition[1] + 1] != 0) {
+					changeDirection();
+					continue;
+				} else {
+					matrix[currentPosition[0]][++currentPosition[1]] = ++count;
 
 				}
-				changeDirection();
-			} else if (direction == Direction.DOWN) {
-				System.out.println("Im here");
-				int numOfOperationsDown = n - currentPosition[0];
-				System.out.println("Current Position is: " + currentPosition[0] + ", " + currentPosition[1]);
-				for (int i = currentPosition[0]; i < numOfOperationsDown; i++) {
-					
-					
-					currentPosition[0] = i;
-					matrix[i][currentPosition[1]] = count;
-					count++;
+
+				break;
+			case DOWN:
+
+				// If the next element is a number or you've reached the edge of the matrix,
+				// change direction. Otherwise, add next element
+
+				if (currentPosition[0] >= n - 1 || matrix[currentPosition[0] + 1][currentPosition[1]] != 0) {
+					changeDirection();
+					continue;
+				} else {
+					matrix[++currentPosition[0]][currentPosition[1]] = ++count;
 				}
-				changeDirection();
+				break;
+
+			case LEFT:
+
+				// If the next element is a number or you've reached the edge of the matrix,
+				// change direction. Otherwise, add next element
+
+				if (currentPosition[1] <= 0 || matrix[currentPosition[0]][currentPosition[1] - 1] != 0) {
+					changeDirection();
+					continue;
+				} else {
+					matrix[currentPosition[0]][--currentPosition[1]] = ++count;
+				}
+				break;
+			case UP:
+				// If the next element is a number or you've reached the edge of the matrix,
+				// change direction. Otherwise, add next element.
 				
-
+				if (currentPosition[0] <= 0 || matrix[currentPosition[0] - 1][currentPosition[1]] != 0) {
+					changeDirection();
+					continue;
+				}else {
+					matrix[--currentPosition[0]][currentPosition[1]]=++count;
+				}
+				break;
 			}
-			else if (direction == Direction.LEFT) {
-				
-				int numOfOperationsDown = n - currentPosition[0];
-				System.out.println("Current Position is: " + currentPosition[0] + ", " + currentPosition[1]);
-				for (int i = currentPosition[0]; i < numOfOperationsDown; i++) {
-					
-					
-					currentPosition[0] = i;
-					matrix[i][currentPosition[1]] = count;
-					count++;
-				}
-				changeDirection();
-				
-
-			}
-//			case UP:
-//				
-//				
-//				break;
-//			}
 
 		}
 
@@ -104,6 +111,7 @@ public class Matrix {
 //		}
 		printMatrix();
 		return matrix;
+
 	}
 
 	private static void printMatrix() {

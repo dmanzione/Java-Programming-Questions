@@ -70,7 +70,10 @@ public class Main {
 //		Vowels.count("Why do you ask?");
 //		Vowels.count("Ask Google!");
 //		Vowels.count("Why?");
-		Matrix.returnSpiral(8);
+		
+		//MATRIX TESTS
+//		Matrix.returnSpiral(4);
+//		Matrix.returnSpiral(10);
 		
 	}
 
