@@ -45,14 +45,15 @@ public class Matrix {
 		int[] currentPosition = { 0, 0 };
 		int count = 1;
 
-		while(count<n*n) {
+		while (count < n * n) {
 //			System.out.println("Current position is " + currentPosition[0] + ", " + currentPosition[1]);
 //			System.out.println("Moving " + direction.toString().toLowerCase());
 			switch (direction) {
 
 			case RIGHT:
 
-				// If the next element is a number or you've reached the edge of the matrix,
+				// If the next element is a number other than zero or you've reached the edge of
+				// the matrix,
 				// change direction. Otherwise, add next element.
 
 				if (currentPosition[1] >= n - 1 || matrix[currentPosition[0]][currentPosition[1] + 1] != 0) {
@@ -66,7 +67,8 @@ public class Matrix {
 				break;
 			case DOWN:
 
-				// If the next element is a number or you've reached the edge of the matrix,
+				// If the next element is a number other than zero or you've reached the edge of
+				// the matrix,
 				// change direction. Otherwise, add next element
 
 				if (currentPosition[0] >= n - 1 || matrix[currentPosition[0] + 1][currentPosition[1]] != 0) {
@@ -79,7 +81,8 @@ public class Matrix {
 
 			case LEFT:
 
-				// If the next element is a number or you've reached the edge of the matrix,
+				// If the next element is a number other than zero or you've reached the edge of
+				// the matrix,
 				// change direction. Otherwise, add next element
 
 				if (currentPosition[1] <= 0 || matrix[currentPosition[0]][currentPosition[1] - 1] != 0) {
@@ -90,25 +93,21 @@ public class Matrix {
 				}
 				break;
 			case UP:
-				// If the next element is a number or you've reached the edge of the matrix,
+				// If the next element is a number other than zero or you've reached the edge of
+				// the matrix,
 				// change direction. Otherwise, add next element.
-				
+
 				if (currentPosition[0] <= 0 || matrix[currentPosition[0] - 1][currentPosition[1]] != 0) {
 					changeDirection();
 					continue;
-				}else {
-					matrix[--currentPosition[0]][currentPosition[1]]=++count;
+				} else {
+					matrix[--currentPosition[0]][currentPosition[1]] = ++count;
 				}
 				break;
 			}
 
 		}
 
-//		for (int i = 0; i < n; i++) {
-//			matrix[0][i] = count + 1;
-//			printMatrix();
-//			count++;
-//		}
 		printMatrix();
 		return matrix;
 

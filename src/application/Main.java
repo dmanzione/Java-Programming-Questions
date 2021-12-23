@@ -83,13 +83,15 @@ public class Main {
 //		Matrix.returnSpiral(2);
 		
 		//WEAVE TESTS
-		//create 1s
+		//create 1st queue
 //		Queue<Integer> q1 = new Queue();
 //		q1.add(1);
 //		q1.add(2);
+		//create 2nd queue
 //		Queue<Integer> q2 = new Queue();
 //		q2.add(100);
 //		q2.add(200);
+		//weave two queues
 //		QueueWeave.weave(q1, q2).print();
 		
 		
